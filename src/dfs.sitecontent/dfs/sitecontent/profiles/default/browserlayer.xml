@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="dfs.sitecontent"
+    interface="dfs.sitecontent.interfaces.IDfsSitecontentLayer"
+  />
+</layers>
