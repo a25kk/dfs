@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="dfs.sitetheme"
+    interface="dfs.sitetheme.interfaces.IDfsSiteThemeLayer"
+  />
+</layers>
