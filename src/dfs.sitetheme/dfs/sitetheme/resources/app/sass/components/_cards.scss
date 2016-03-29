@@ -1,0 +1,530 @@
+//
+// Cards displaying thumbnails and data collections
+// ------------------------------------------------------
+
+
+//== Card lists
+//
+//## Use a grid layout for card listings
+.app-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app-frontpage-cards {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 0.5 !important;
+}
+
+//** Base card styles
+.app-card {
+    flex: 0 0 33.3333%;
+    color: #fff;
+    a {
+        font-weight: 400;
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover {
+        opacity: 0.9;
+    }
+    @include media-breakpoint-down(md) {
+        flex: 0 0 50%;
+    }
+    @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+    }
+}
+
+//== Card layout
+//
+//## Reflow card contents based on viewport size
+.app-card-header {
+    display: flex;
+    justify-content: center;
+    height: 4.5rem;
+    min-height: 4.5rem;
+    padding: 1.5rem 1rem 1rem 2rem;
+    @include gradient-x($app-secondary, $app-primary, 0%, 100%);
+}
+
+//== Card title
+//
+//## Title is used inside the card header
+.app-card-title {
+    flex: 0 1 95%;
+    font-size: .8rem;
+    font-weight: 700;
+    @include media-breakpoint-up(sm) {
+        font-size: 1rem;
+    }
+    
+    // Fill svg paths per default
+    path {
+        fill: #fff;
+    }
+}
+
+// Compute Card title spacers from list
+$card-title-spacers: (
+    spacer1: .5rem,
+    spacer2: 1rem,
+    spacer3: 1.5rem,
+    spacer4: 2rem,
+    spacer5: 2.5rem,
+    spacer6: 3rem,
+    spacer7: 3.5rem,
+    spacer8: 4rem,
+    spacer9: 4.5rem,
+    spacer10: 5rem,
+    spacer11: 5.5rem,
+    spacer12: 6rem,
+    spacer13: 6.5rem,
+    spacer14: 7rem,
+    spacer15: 7.5rem,
+    spacer16: 8rem,
+    spacer17: 8.5rem,
+    spacer18: 9rem,
+    spacer19: 9.5rem,
+    spacer20: 10rem,
+    spacer21: 10.5rem,
+    spacer22: 11rem,
+    spacer23: 11.5rem,
+    spacer24: 12rem,
+    spacer25: 12.5rem,
+    spacer26: 13rem,
+);
+
+@each $card-spacer, $spacer-value in $card-title-spacers {
+    .app-card-title-#{$card-spacer} {
+        padding-right: $spacer-value;
+    }
+}
+
+
+.app-card-icon {
+    flex: 0 1 5%;
+    padding: 0rem 1rem 2rem 1rem;
+}
+
+.app-card-trenner {
+    height: 1.2rem;
+    @include gradient-x($app-secondary, transparent, 0%, 100%);
+}
+
+//** Card content
+.app-card-main {
+    width: 100%;
+    &-plain {
+        padding-top: .5rem;
+        background: $gray-light;
+    }
+}
+
+//** Card footer
+.app-card-footer {
+    padding: 1rem;
+    //flex: 0 0 33.3333%;
+    img {
+      width: 100%;
+    }
+}
+
+//== Gutter
+//
+//## Add spacing to cards
+.app-card-gutter {
+    margin: -1rem 0 0 -1rem;
+    .app-card {
+        padding: 1rem 0 0 1rem;
+    }
+}
+
+
+//** Set card content specific styles
+.app-card-content {
+    padding-top: 1rem;
+    font-size: 1rem;
+    &-default {
+        background: $app-gray;
+    }
+    address {
+        margin-bottom: 0.75rem;
+    }
+}
+
+//== Banner cards
+//
+//## Landingpage and frontpage card groups
+//## with banner images
+.app-card-banner {
+    background: transparent no-repeat scroll top center;
+    background-size: cover;
+    min-height: 250px;
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1.2rem;
+        @include gradient-x($app-secondary, transparent, 0%, 100%);
+    }
+    &-ma {
+        background-image: url("../assets/img/card-ma-bg.jpg");
+    }
+    &-ps {
+        background-image: url("../assets/img/card-ps-bg.jpg");
+    }
+    &-fd {
+        background-image: url("../assets/img/card-fd-bg.jpg");
+    }
+    &-fp {
+        background-image: url("../assets/img/card-fp-bg.jpg");
+    }
+    &-uu {
+        background-image: url("../assets/img/card-uu-bg.jpg");
+    }
+    &-gp {
+        background-image: url("../assets/img/card-gp-bg.jpg");
+    }
+    &-anaesthesie {
+        background-image: url("../assets/img/card-anaesthesie-bg.jpg");
+    }
+    &-geriatrie {
+        background-image: url("../assets/img/card-geriatrie-bg.jpg");
+    }
+    &-chirurgie {
+        background-image: url("../assets/img/card-chirurgie-bg.jpg");
+    }
+    &-frauenheilkunde {
+        background-image: url("../assets/img/card-frauenheilkunde-bg.jpg");
+    }
+    &-innere {
+        background-image: url("../assets/img/card-innere-bg.jpg");
+    }
+    &-urologie {
+        background-image: url("../assets/img/card-urologie-bg.jpg");
+    }
+    &-ueber-unsere-pflege {
+        background-image: url("../assets/img/card-ueber-unsere-pflege-bg.jpg");
+    }
+    &-pflege-und-leitungsphilosophie {
+        background-image: url("../assets/img/card-pflege-und-leitungsphilosophie-bg.jpg");
+    }
+    &-aus-fort-und-weiterbildung {
+        background-image: url("../assets/img/card-aus-fort-und-weiterbildung-bg.jpg");
+    }
+}
+
+
+//== Placeholder for missing card content 
+//
+//## Provide call to actions and descriptions on empty cards
+//## by providing highlighted card content
+.app-card-placeholder {
+    margin: 0.5rem auto;
+    padding: 1rem;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+        padding: 2rem 3rem;
+        width: 66.66%;
+    }
+}
+
+//** Round hellip sign
+.app-card-placeholder-sign {
+    @include size(4rem);
+    @extend .center-block;
+    padding-top: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid $gray-lighter;
+    color: $gray-lighter;
+    font-size: 2rem;
+}
+
+//== Embedded card
+//
+//## Remove spacing for card inside card usecase
+
+.app-subcards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app-subcard {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    flex: 0 1 50%;
+    padding: 1.5rem;
+        @include media-breakpoint-down(md) {
+        flex: 0 0 50%;
+    }
+        @include media-breakpoint-down(sm) {
+            flex: 0 0 100%;
+        }
+    path {
+        fill: #fff;
+    }
+}
+
+//** quick / multitarget card
+
+.card-quick {
+    @include media-breakpoint-down(md) {
+        flex: 0 0 100%;
+    }
+    .app-card-main {
+        @include gradient-y($app-primary, $app-secondary, 0%, 100%);
+    }
+    .app-card-content {
+        font-size: 1rem;
+    }
+    .app-subcard-title {
+        font-size: .9rem;
+    }
+    a:hover {
+        opacity: 0.6;       
+    }
+
+//** quick / Subcard pray
+
+.subcard-tl {
+    text-align: center;
+    border: 2px solid #fff;
+    border-width: 0 2px 2px 0;
+        @include media-breakpoint-down(sm) {
+            border-width: 0 0 2px 0;
+        }
+}
+.logo-pray {
+    width: 86px;
+    height: 89px;
+    margin: 0 auto !important;
+}
+
+
+//** quick / Subcard donation
+
+.subcard-tr {
+    text-align: center;
+    border: 2px solid #fff;
+    border-width: 0 0 2px 2px;
+    @include media-breakpoint-down(sm) {
+      border-width: 0 0 2px 0;
+    }
+  }
+
+.logo-donation {
+    width: 86px;
+    height: 80px;
+    margin: .6rem auto 0 auto !important;
+}
+
+//** quick / Subcard employee
+
+.subcard-bl {
+    text-align: center;
+    border: 2px solid #fff;
+    border-width: 2px 0 0 2px;
+    @include media-breakpoint-down(sm) {
+      border-width: 0 0 0 0;
+    }
+}
+
+.logo-employee {
+    width: 98px;
+    height: 87px;
+    margin: 0 auto !important;
+    padding-top: 1.6rem;
+}
+
+//** quick / Subcard parking
+
+.subcard-br {
+    text-align: center;
+    border: 2px solid #fff;
+    border-width: 2px 2px 0 0;
+    @include media-breakpoint-down(sm) {
+      border-width: 0 0 2px 0;
+    }
+}
+
+.logo-parking {
+    width: 86px;
+    height: 89px;
+    margin: 0 auto !important;
+    padding-top: 1rem;
+    }
+}
+
+//** Contact / Contact modules
+
+.app-card-contact {
+    margin-bottom: 1rem;
+
+    .app-card-header {
+        height: auto;
+        min-height: auto;
+        padding: .5rem;
+        background: $app-secondary;
+        font-size: 1rem !important;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .app-page-abstract {
+        background: $app-primary;
+        padding: .5rem;
+        font-size: .8rem;
+        margin-bottom: 0;
+        color: #fff;
+    }
+
+    .app-card-content {
+        padding: 0;
+        color: #000;
+        address {
+            margin-bottom: 0;
+        }
+    }
+
+    .app-card-footer {
+        background: #eee;
+        padding: 1rem !important;
+    }
+
+    .app-page-image-container {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .btn-primary {
+        width: 100%;
+        background: $app-secondary;
+        border-color: $app-secondary;
+    }
+}
+
+.app-contact-position {
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.app-contact-phone {
+    padding-left: 1rem;
+    position: relative;
+    &:before {
+    content: "\f095";
+    font-family: FontAwesome;
+    padding-right: .7rem;
+    }
+}
+
+.app-contact-fax {
+    padding-left: 1rem;
+    position: relative;
+    &:before {
+    content: "\f1ac";
+    font-family: FontAwesome;
+    padding-right: .5rem;
+    }
+}
+
+.app-contact-email {
+    position: relative;
+    color: #fff;
+    &:before {
+    content: "\f003";
+    font-family: FontAwesome;
+    padding-right: .5rem;
+    color: #fff;
+    }
+}
+
+.template-contact-view {
+  .app-contact-position {
+    padding-left: 1rem;
+  }
+  address {
+    padding-left: 1rem;
+  }
+}
+
+
+//** Contact / Elements modules
+
+
+.app-contact-viewlet-elements {
+}
+
+.app-contact-element {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app-contact-element-aside {
+
+    flex: 0 0 33.3333%;
+    a {
+        font-weight: 400;
+        text-decoration: none;
+        color: $app-primary;
+    }
+    a:hover {
+        opacity: 0.9;
+    }
+    @include media-breakpoint-down(md) {
+        flex: 0 0 50%;
+    }
+    @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+    }
+
+}
+
+.app-contact-element-main {
+    flex: 0 0 66.6666%;
+    padding: 1rem;
+    background: #eee;
+
+    @include media-breakpoint-down(md) {
+        flex: 0 0 50%;
+    }
+    @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+    }
+
+    address {
+        margin-bottom: 0;
+    }
+
+    .app-contact-position {
+        padding: 1rem 0;
+    }
+
+    .app-contact-phone,
+    .app-contact-fax {
+        padding: 0;
+    }
+}
+
+.app-contact-element-title {
+    font-weight: 700;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.app-contact-element-media {
+    margin: 0;
+}
+
+.app-contact-actions {
+    padding-top: 1rem;
+}
+
+
+
