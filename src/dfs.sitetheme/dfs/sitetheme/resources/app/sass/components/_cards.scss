@@ -19,21 +19,29 @@
 
 //** Base card styles
 .app-card {
-    flex: 0 0 33.3333%;
+    @include when-inside('.no-flexbox') {
+        // Fallback
+        display: table-cell;
+    }
     color: #fff;
     a {
-        font-weight: 400;
-        text-decoration: none;
         color: #fff;
     }
     a:hover {
-        opacity: 0.9;
+        text-decoration: none;
     }
-    @include media-breakpoint-down(md) {
-        flex: 0 0 50%;
+
+    a:visited {
+        text-decoration: none;
     }
-    @include media-breakpoint-down(sm) {
-        flex: 0 0 100%;
+    @include when-inside('.app-cards') {
+        @include make-col(12);
+        @include media-breakpoint-up(sm) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
     }
 }
 
@@ -256,12 +264,15 @@ $card-title-spacers: (
     margin-right: 0;
     margin-bottom: 0;
     flex: 0 1 50%;
+    max-width: 50%;
     padding: 1.5rem;
         @include media-breakpoint-down(md) {
         flex: 0 0 50%;
+        max-width: 50%;
     }
         @include media-breakpoint-down(sm) {
             flex: 0 0 100%;
+            max-width: 100%;
         }
     path {
         fill: #fff;
@@ -357,174 +368,3 @@ $card-title-spacers: (
     padding-top: 1rem;
     }
 }
-
-//** Contact / Contact modules
-
-.app-card-contact {
-    margin-bottom: 1rem;
-
-    .app-card-header {
-        height: auto;
-        min-height: auto;
-        padding: .5rem;
-        background: $app-secondary;
-        font-size: 1rem !important;
-        color: #fff;
-        font-weight: 700;
-    }
-
-    .app-page-abstract {
-        background: $app-primary;
-        padding: .5rem;
-        font-size: .8rem;
-        margin-bottom: 0;
-        color: #fff;
-    }
-
-    .app-card-content {
-        padding: 0;
-        color: #000;
-        address {
-            margin-bottom: 0;
-        }
-    }
-
-    .app-card-footer {
-        background: #eee;
-        padding: 1rem !important;
-    }
-
-    .app-page-image-container {
-        margin-bottom: 0;
-    }
-
-    a {
-        color: #fff;
-    }
-
-    .btn-primary {
-        width: 100%;
-        background: $app-secondary;
-        border-color: $app-secondary;
-    }
-}
-
-.app-contact-position {
-    font-weight: 700;
-    padding: 1rem;
-}
-
-.app-contact-phone {
-    padding-left: 1rem;
-    position: relative;
-    &:before {
-    content: "\f095";
-    font-family: FontAwesome;
-    padding-right: .7rem;
-    }
-}
-
-.app-contact-fax {
-    padding-left: 1rem;
-    position: relative;
-    &:before {
-    content: "\f1ac";
-    font-family: FontAwesome;
-    padding-right: .5rem;
-    }
-}
-
-.app-contact-email {
-    position: relative;
-    color: #fff;
-    &:before {
-    content: "\f003";
-    font-family: FontAwesome;
-    padding-right: .5rem;
-    color: #fff;
-    }
-}
-
-.template-contact-view {
-  .app-contact-position {
-    padding-left: 1rem;
-  }
-  address {
-    padding-left: 1rem;
-  }
-}
-
-
-//** Contact / Elements modules
-
-
-.app-contact-viewlet-elements {
-}
-
-.app-contact-element {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.app-contact-element-aside {
-
-    flex: 0 0 33.3333%;
-    a {
-        font-weight: 400;
-        text-decoration: none;
-        color: $app-primary;
-    }
-    a:hover {
-        opacity: 0.9;
-    }
-    @include media-breakpoint-down(md) {
-        flex: 0 0 50%;
-    }
-    @include media-breakpoint-down(sm) {
-        flex: 0 0 100%;
-    }
-
-}
-
-.app-contact-element-main {
-    flex: 0 0 66.6666%;
-    padding: 1rem;
-    background: #eee;
-
-    @include media-breakpoint-down(md) {
-        flex: 0 0 50%;
-    }
-    @include media-breakpoint-down(sm) {
-        flex: 0 0 100%;
-    }
-
-    address {
-        margin-bottom: 0;
-    }
-
-    .app-contact-position {
-        padding: 1rem 0;
-    }
-
-    .app-contact-phone,
-    .app-contact-fax {
-        padding: 0;
-    }
-}
-
-.app-contact-element-title {
-    font-weight: 700;
-    padding-bottom: 1rem;
-    font-size: 2rem;
-}
-
-.app-contact-element-media {
-    margin: 0;
-}
-
-.app-contact-actions {
-    padding-top: 1rem;
-}
-
-
-

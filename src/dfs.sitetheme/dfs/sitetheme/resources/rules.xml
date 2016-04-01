@@ -16,6 +16,7 @@
     <theme href="dist/index.html" css:if-content="body.portaltype-dfs-sitecontent-contentpage" />
     <theme href="dist/medicine/index.html" css:if-content="body.section-medizin-und-aerzte" />
     <theme href="dist/care/index.html" css:if-content="body.section-pflege-in-der-stadtklinik" />
+    <theme href="dist/full/index.html" css:if-content="body.template-search" />
     
 
 

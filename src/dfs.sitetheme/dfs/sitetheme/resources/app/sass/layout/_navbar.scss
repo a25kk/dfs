@@ -111,7 +111,7 @@
         //width: 16.66666667%;
         width: auto;
         @include media-breakpoint-up(lg) {
-            background: transparent url("../assets/img/dot.png") no-repeat scroll right 10px;
+            background: transparent;
             padding-left: 1rem;
             padding-right: 1rem;
         }

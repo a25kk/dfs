@@ -4,6 +4,9 @@
     @include media-breakpoint-up(sm) {
         margin-top: 0;
         margin-bottom: 1rem;
+        @include when-inside('.template-search') {
+          margin-top: 1rem;
+        }
     }
 }
 
