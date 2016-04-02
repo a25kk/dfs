@@ -13795,6 +13795,10 @@ body.template-frontpage-view .app-pathbar
 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3F2794', endColorstr='#00000000', GradientType=1);
 }
+.app-card-banner-default
+{
+    background-image: url('../assets/img/card-default-bg.jpg');
+}
 .app-card-banner-ma
 {
     background-image: url('../assets/img/card-ma-bg.jpg');

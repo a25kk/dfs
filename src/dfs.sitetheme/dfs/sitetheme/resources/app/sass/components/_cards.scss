@@ -177,6 +177,9 @@ $card-title-spacers: (
         height: 1.2rem;
         @include gradient-x($app-secondary, transparent, 0%, 100%);
     }
+    &-default {
+        background-image: url("../assets/img/card-default-bg.jpg");
+    }
     &-ma {
         background-image: url("../assets/img/card-ma-bg.jpg");
     }
