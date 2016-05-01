@@ -11,6 +11,7 @@
     <includeDependencies package="." />
 
     <include package=".browser" />
+    <include package=".behaviors" />
 
     <!-- Register locales directory -->
     <i18n:registerTranslations directory="locales" />

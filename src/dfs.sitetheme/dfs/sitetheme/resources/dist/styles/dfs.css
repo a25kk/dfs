@@ -13209,6 +13209,12 @@ img[data-sizes='auto']
     font-weight: 700;
 }
 
+.app-banner-item-headline
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 .app-banner-item-description
 {
     font-size: .9rem;
@@ -13241,11 +13247,11 @@ img[data-sizes='auto']
 
 .flickity-page-dots
 {
-    bottom: 10px !important;
+    bottom: 1rem !important;
 
-    padding-right: 1rem; 
+    padding-left: 1rem; 
 
-    text-align: right;
+    text-align: left;
 }
 
 .flickity-page-dots .dot
