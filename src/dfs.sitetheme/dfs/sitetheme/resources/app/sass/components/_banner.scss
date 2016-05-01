@@ -92,21 +92,6 @@
     background: #fff;
 }
 
-/* ---- static banner ---- */
-
-.app-staticbanner {
-  height: 123px;
-  background: transparent url("../assets/img/sb01.jpg") repeat-x scroll top center;
-  background-size: cover;
-  body.template-frontpage-view & {display: none;} //nothing to display on homepage
-  .app-banner-item-title {
-    padding-top: 5rem;
-    padding-left: 1rem;
-    color: #fff;
-    font-size: 1.4rem;
-  }
-}
-
 .app-corporate-wrapper {
   border: 0px solid red;
   @extend.container;

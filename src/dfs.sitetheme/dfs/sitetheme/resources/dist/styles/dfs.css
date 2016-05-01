@@ -4313,7 +4313,6 @@ pre code
 .app-banner,
 .app-corporate-wrapper,
 .app-pathbar,
-.app-partner-cards,
 .app-main
 {
     margin-right: auto;
@@ -4331,7 +4330,6 @@ pre code
     .app-banner,
     .app-corporate-wrapper,
     .app-pathbar,
-    .app-partner-cards,
     .app-main
     {
         max-width: 576px;
@@ -4347,7 +4345,6 @@ pre code
     .app-banner,
     .app-corporate-wrapper,
     .app-pathbar,
-    .app-partner-cards,
     .app-main
     {
         max-width: 720px;
@@ -4363,7 +4360,6 @@ pre code
     .app-banner,
     .app-corporate-wrapper,
     .app-pathbar,
-    .app-partner-cards,
     .app-main
     {
         max-width: 940px;
@@ -4379,7 +4375,6 @@ pre code
     .app-banner,
     .app-corporate-wrapper,
     .app-pathbar,
-    .app-partner-cards,
     .app-main
     {
         max-width: 1140px;
@@ -13259,28 +13254,6 @@ img[data-sizes='auto']
     background: #fff;
 }
 
-/* ---- static banner ---- */
-.app-staticbanner
-{
-    height: 123px;
-
-    background: transparent url('../assets/img/sb01.jpg') repeat-x scroll top center;
-    background-size: cover;
-}
-body.template-frontpage-view .app-staticbanner
-{
-    display: none;
-}
-.app-staticbanner .app-banner-item-title
-{
-    font-size: 1.4rem; 
-
-    padding-top: 5rem;
-    padding-left: 1rem;
-
-    color: #fff;
-}
-
 .app-corporate-wrapper
 {
     border: 0 solid red;
@@ -14357,38 +14330,106 @@ body.template-frontpage-view .app-pathbar
     background-color: #0093b9;
 }
 
-.app-partner-cards-wrapper
+.app-gallery
 {
-    padding: 2rem; 
+    overflow: hidden; 
 
-    background: #f0f0f0;
+    height: 220px;
+}
+@media (min-width: 544px)
+{
+    .app-gallery
+    {
+        height: 380px;
+    }
+}
+@media (min-width: 768px)
+{
+    .app-gallery
+    {
+        height: 600px;
+    }
+}
+.app-gallery .flickity-page-dots
+{
+    display: none;
 }
 
-.partner-card
+.project-gallery
 {
-    min-height: 200px;
+    position: relative;
 }
 
-.partner-card-dl
+.app-gallery-caption
 {
-    background: #fff url('../assets/img/logo-dl.jpg') no-repeat scroll center center;
+    width: 100%;
+}
+@media (min-width: 544px)
+{
+    .app-gallery-caption
+    {
+        position: absolute;
+        z-index: 1001;
+        top: 2rem;
+        left: 4rem;
+
+        width: 35%;
+        padding: 4rem 2rem 2rem 2rem;
+
+        background: #0093b9;
+    }
 }
 
-.partner-card-elkb
+.app-gallery-cell
 {
-    padding: 4rem 2rem 0 2rem; 
+    overflow: hidden; 
 
+    width: 100%;
+    height: 220px;
+}
+@media (min-width: 544px)
+{
+    .app-gallery-cell
+    {
+        height: 380px;
+    }
+}
+@media (min-width: 768px)
+{
+    .app-gallery-cell
+    {
+        height: 600px;
+    }
+}
+.app-gallery-cell img
+{
+    width: 100%;
+}
+
+/* ---- flickity overrides ---- */
+.flickity-prev-next-button
+{
+    background: transparent;
+}
+
+.flickity-prev-next-button .arrow
+{
+    fill: #fff;
+}
+
+.flickity-prev-next-button:hover
+{
+    background: none;
+}
+
+.flickity-page-dots
+{
+    bottom: 20px !important;
+}
+
+.flickity-page-dots .dot
+{
     background: #fff;
-}
-
-.partner-card-elda
-{
-    background: #fff url('../assets/img/logo-elda.png') no-repeat scroll center center;
-}
-
-.partner-card-vivaxx
-{
-    background: #fff url('../assets/img/logo-vivaxx.png') no-repeat scroll center center;
 }
 
 .app-layout-simple
