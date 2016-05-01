@@ -12345,7 +12345,7 @@ div.riform .label
 {
     .app-navitem-tab
     {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 .app-navitem-tab:hover
@@ -13799,65 +13799,13 @@ body.template-frontpage-view .app-pathbar
 {
     background-image: url('../assets/img/card-default-bg.jpg');
 }
-.app-card-banner-ma
+.app-card-banner-01
 {
-    background-image: url('../assets/img/card-ma-bg.jpg');
+    background-image: url('../assets/img/card-01-bg.jpg');
 }
-.app-card-banner-ps
+.app-card-banner-02
 {
-    background-image: url('../assets/img/card-ps-bg.jpg');
-}
-.app-card-banner-fd
-{
-    background-image: url('../assets/img/card-fd-bg.jpg');
-}
-.app-card-banner-fp
-{
-    background-image: url('../assets/img/card-fp-bg.jpg');
-}
-.app-card-banner-uu
-{
-    background-image: url('../assets/img/card-uu-bg.jpg');
-}
-.app-card-banner-gp
-{
-    background-image: url('../assets/img/card-gp-bg.jpg');
-}
-.app-card-banner-anaesthesie
-{
-    background-image: url('../assets/img/card-anaesthesie-bg.jpg');
-}
-.app-card-banner-geriatrie
-{
-    background-image: url('../assets/img/card-geriatrie-bg.jpg');
-}
-.app-card-banner-chirurgie
-{
-    background-image: url('../assets/img/card-chirurgie-bg.jpg');
-}
-.app-card-banner-frauenheilkunde
-{
-    background-image: url('../assets/img/card-frauenheilkunde-bg.jpg');
-}
-.app-card-banner-innere
-{
-    background-image: url('../assets/img/card-innere-bg.jpg');
-}
-.app-card-banner-urologie
-{
-    background-image: url('../assets/img/card-urologie-bg.jpg');
-}
-.app-card-banner-ueber-unsere-pflege
-{
-    background-image: url('../assets/img/card-ueber-unsere-pflege-bg.jpg');
-}
-.app-card-banner-pflege-und-leitungsphilosophie
-{
-    background-image: url('../assets/img/card-pflege-und-leitungsphilosophie-bg.jpg');
-}
-.app-card-banner-aus-fort-und-weiterbildung
-{
-    background-image: url('../assets/img/card-aus-fort-und-weiterbildung-bg.jpg');
+    background-image: url('../assets/img/card-02-bg.jpg');
 }
 
 .app-card-placeholder

@@ -136,7 +136,7 @@
     transition: background-color 0.5s ease;
     font-size: 0.8rem;
      @include media-breakpoint-up(lg) {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
      }
     &:hover {
         color: $app-blue-primary;
