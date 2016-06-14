@@ -17,6 +17,7 @@
     <theme href="dist/full/index.html" css:if-content="body.section-kontakt" />
     <theme href="dist/full/index.html" css:if-content="body.section-ausbildung" />
     <theme href="dist/full/index.html" css:if-content="body.section-wege-zu-uns" />
+    <theme href="dist/full/index.html" css:if-content="body.section-impressum" />
     <theme href="dist/index.html" css:if-content="body.portaltype-dfs-sitecontent-contentpage" />
     <theme href="dist/full/index.html" css:if-content="body.template-search" />
 
