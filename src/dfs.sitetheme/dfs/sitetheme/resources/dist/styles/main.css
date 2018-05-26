@@ -12358,6 +12358,7 @@ iframe {
       align-items: center;
   padding: 0;
   background: transparent;
+  width: 100%;
 }
 
 .app-navbar-header::after {
@@ -12781,7 +12782,7 @@ textarea {
 
 .app-brandname-logo {
   width: 100%;
-  margin: 2rem 0 1rem 0;
+  margin: 1rem;
 }
 
 .app-brandname-logo path {
