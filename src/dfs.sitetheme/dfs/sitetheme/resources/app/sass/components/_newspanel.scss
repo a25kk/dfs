@@ -47,13 +47,17 @@
     @include media-breakpoint-up(sm) {
         @include make-col(4);
         padding-left: 0;
+        padding-right: 1rem;
     }
-    //padding-right: ($spacer * 6);
+    figure {
+        margin-bottom: 0;
+    }
 }
 
 .app-news-list-item-main {
     padding: 1rem 1rem 1rem;
     background-color: $app-gray;
+    position: relative;
     @include media-breakpoint-up(sm) {
         @include make-col(8);
         padding: 2rem 1rem 1rem;
@@ -69,7 +73,7 @@
 .app-news-list-item-title {
     font-size: 1.2rem;
     a {
-        color: $app-secondary;
+        color: $app-primary;
         font-weight: 700;
     }
 }
@@ -93,5 +97,5 @@
 }
 
 .app-news-list-link {
-    color: $app-secondary;
+    color: $app-primary;
 }

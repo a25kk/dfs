@@ -34,7 +34,7 @@
 }
 
 .app-navbar-header-toggle {
-    @include pull-right;
+    float: right;
 }
 
 // Navbar toggle button visible on small displays

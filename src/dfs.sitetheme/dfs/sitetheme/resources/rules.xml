@@ -32,34 +32,31 @@
         <notheme if="$ajax_load" />
         <theme href="dist/index.html" />
 
-        <replace css:theme="title" css:content="title" />
+         <replace css:theme="title" css:content="title" />
         <after theme="/html/head/title" css:content="base" />
         <!-- Add meta tags -->
-        <drop theme="/html/head/meta" />
-
+        <drop css:content="meta[name='viewport']" />
         <before content="/html/head/meta" theme="/html/head/title" />
 
+       <after
+            content="/html/head/link | /html/head/style | /html/head/script"
+            theme-children="/html/head"
+        />
+
        <rules css:if-content="body.userrole-authenticated">
-            <!-- Copy style, script and link tags in the order they appear in the content -->
-            <after
-                content="/html/head/style | /html/head/script | /html/head/link"
-                theme-children="/html/head"
-                />
-
+           <!-- Drop style tags from theme template -->
             <drop theme="/html/head/style" />
-            <drop theme="/html/head/link" />
-
-            <!-- Drop scripts from theme footer if present -->
-            <drop theme="/html/body/script" />
         </rules>
+
+        <drop theme="/html/body/script" />
 
         <!-- Custom favicon implementation -->
         <drop css:content="head link[rel='apple-touch-icon']" />
         <drop css:content="head link[rel='shortcut icon']" />
         <after theme="/html/head">
-            <link rel="shortcut icon" href="/++theme++dfs.sitetheme/dist/assets/ico/favicon.ico" type="images/x-icon" />
-            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/++theme++dfs.sitetheme/dist/assets/ico/apple-touch-icon-144-precomposed.png" />
-            <link rel="shortcut icon" href="/++theme++dfs.sitetheme/dist/assets/ico/favicon.png" />
+            <link rel="shortcut icon" href="/++theme++dps.sitetheme/dist/assets/ico/favicon.ico" type="images/x-icon" />
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/++theme++dps.sitetheme/dist/assets/ico/apple-touch-icon-144-precomposed.png" />
+            <link rel="shortcut icon" href="/++theme++dps.sitetheme/dist/assets/ico/favicon.png" />
         </after>
 
         <!-- Copy over the id/class attributes on the body tag.
@@ -424,6 +421,12 @@
 
         <after css:theme-children="#app-sidebar"
           css:content-children="#app-contact-viewlet-cards" />
+
+        <!-- Support cookie consent -->
+        <after css:theme-children="#app-footer"
+               css:content="#cookie-consent"
+               css:if-content="#cookie-consent" />
+
 
     </rules>
 

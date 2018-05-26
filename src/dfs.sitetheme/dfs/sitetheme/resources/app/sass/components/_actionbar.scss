@@ -46,7 +46,7 @@
 
 .app-searchbox-field {
   @extend .form-control;
-  width: 75%;
+  width: 75% !important;
   background-color: $app-gray;
   border-color: $app-gray;
     &::placeholder {
@@ -58,7 +58,13 @@
 
 .app-searchbox-btn {
   width: 25%;
-  @include button-variant(#fff, $app-secondary, $app-secondary);
+  background-color: $app-primary;
+  border: 0;
+  color: #fff;
+  @include media-breakpoint-up(md) {
+    //padding-left: 2rem;
+    //padding-right: 2rem;
+    }
   .fa {
     margin: 0 auto;
   }
@@ -81,6 +87,6 @@
 
 .app-action-right {
   width: 25%;
-  background: $app-secondary;
+  background: $app-primary;
   color: #fff;
 }

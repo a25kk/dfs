@@ -105,6 +105,6 @@
     position: relative;
     //right: 0;
 
-    @include pull-right;
+    float: right;
   }
 }
