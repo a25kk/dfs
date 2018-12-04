@@ -41,7 +41,7 @@ class FrontPageView(BrowserView):
                         review_state='published',
                         sort_on='Date',
                         sort_order='reverse',
-                        sort_limit=3)[:3]
+                        sort_limit=7)[:7]
         return IContentListing(items)
 
     def rendered_news_card(self, uuid):
