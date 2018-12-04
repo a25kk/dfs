@@ -120,10 +120,9 @@
 // area and need a horizontal layout grid
 
 .app-contact-viewlet-elements {
-    //@include make-row();
-    //border: 1px solid red;
-    @include media-breakpoint-up(sm) {
-        padding-left: 0rem;
+    padding: 1rem;
+    @include media-breakpoint-up(md) {
+        padding: 0rem;
     } 
 }
 
@@ -141,9 +140,10 @@
 
 .app-contact-element-aside {
     @include make-col(12);
-    padding-right: 0;
+    padding-left: 1rem;
     @include media-breakpoint-up(sm) {
         @include make-col(4);
+        padding-right: 0;
     }
 }
 

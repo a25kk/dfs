@@ -14255,6 +14255,10 @@ input[type="color"], .app-newsletterbar .app-searchbox-field {
   margin-bottom: 1rem;
 }
 
+.app-page__figure {
+  margin-bottom: 0;
+}
+
 .app-section-cards .app-card {
   -ms-flex: 0 0 50%;
       flex: 0 0 50%;
@@ -14581,9 +14585,13 @@ input[type="color"], .app-newsletterbar .app-searchbox-field {
   padding-left: 1rem;
 }
 
-@media (min-width: 576px) {
+.app-contact-viewlet-elements {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
   .app-contact-viewlet-elements {
-    padding-left: 0rem;
+    padding: 0rem;
   }
 }
 
@@ -14609,7 +14617,7 @@ input[type="color"], .app-newsletterbar .app-searchbox-field {
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
   max-width: 100%;
-  padding-right: 0;
+  padding-left: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -14617,6 +14625,7 @@ input[type="color"], .app-newsletterbar .app-searchbox-field {
     -ms-flex: 0 0 33.3333333333%;
         flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
+    padding-right: 0;
   }
 }
 
